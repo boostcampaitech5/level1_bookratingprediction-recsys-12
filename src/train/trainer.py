@@ -61,7 +61,7 @@ def train(args, model, dataloader, logger, setting):
         
         # FIXME: dirty code needs to be refactored
         if args.use_early_stop:
-            if valid_loss <= lowest_loss:
+            if valid_loss > lowest_loss:
                 print("early stop")
                 lowest_loss = valid_loss
                 os.makedirs(args.saved_model_path, exist_ok=True)
