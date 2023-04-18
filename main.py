@@ -20,6 +20,7 @@ def define_argparser():
     parser.add_argument('--test_size', type=float, default=0.2, help='Train/Valid split 비율을 조정할 수 있습니다.')
     parser.add_argument('--seed', type=int, default=42, help='seed 값을 조정할 수 있습니다.')
     parser.add_argument('--use_best_model', type=bool, default=True, help='검증 성능이 가장 좋은 모델 사용여부를 설정할 수 있습니다.')
+    parser.add_argument('--use_early_stop', type=bool, default=True, help='validation loss가 전 epoch가 커진 경우 모델을 저장하고 학습을 정지합니다.')
 
     ############### TRAINING OPTION
     parser.add_argument('--batch_size', type=int, default=1024, help='Batch size를 조정할 수 있습니다.')
